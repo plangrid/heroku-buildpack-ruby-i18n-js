@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+echo "-----> Running i18n:js:export rake task"
+
+BUILD_DIR=${1:-}
+
+cd $BUILD_DIR
+
+bundle exec rake i18n:js:export
