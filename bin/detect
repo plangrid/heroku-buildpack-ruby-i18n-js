@@ -2,14 +2,5 @@
 
 set -e
 
-BUILD_DIR=${1:-}
-
-cd $BUILD_DIR
-
-# this pack is valid for apps with a i18n:js:export raketask
-if [[ $(rake -T | grep i18n:js:export) ]]; then
-  echo "heroku-buildpack-ruby-i18n-js"
-  exit 0
-else
-  exit 1
-fi
+echo "heroku-buildpack-ruby-i18n-js"
+exit 0
